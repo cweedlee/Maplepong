@@ -1,34 +1,86 @@
-# Frontend
+# ft_transcendence
 
-# General convention
+**React-like SPA Framework built from scratch in Vanilla JS**  
+바닐라 JS로 직접 구현한 React 유사 SPA 프레임워크
 
-- 기능별 브랜치 생성하고 코드 작성 후
-`Pull Request` 요청할 것
-- 필요한 기능들 `issue`에 달아놓을 것!
-- Pull Request/issue의 convention 지킬 것
+---
 
-# Code convention
-`Google code convention`을 따름
-- `JavaScript`
--  변수명, 함수명은 lowerCamelCase
--  클래스명은 UpperCamelCase
-그 외는 [여기](https://google.github.io/styleguide/jsguide.html) 참고
- 
-# Commit convention
+## Overview / 프로젝트 개요
 
-최대 50글자까지 작성
-ex) Feat: Add Key mapping
+A pong game and user management web application built without any frontend framework.  
+The core challenge was implementing a React-like SPA framework from scratch using only vanilla JavaScript.
 
-첫 글자 대문자!!!!!!
+외부 프론트엔드 라이브러리 없이 제작한 핑퐁 게임 및 유저 관리 웹 애플리케이션입니다.  
+바닐라 JavaScript만으로 React 유사 SPA 프레임워크를 직접 구현하는 것이 핵심 과제였습니다.
 
-- `✨ feat` : 새로운 기능 추가
-- `🔨 fix` : 버그 수정
-- `♻️ refactor` : 코드 리팩토링
-- `🎨 design` : 사용자 UI 디자인 변경
-- `💡 comment` : 필요한 주석 추가 및 변경
-- `💄 style` : 스타일 변경 (코드 형식, 세미콜론, 로직에 변경 없는 경우)
-- `📝 docs` : 문서 수정, 추가, 삭제 (README)
-- `🧪 test` : 테스트 관련 (테스트 코드 추가, 수정, 삭제)
-- `chore` : 기타 변경사항 (빌드 스크립트 수정, 패키지 매니저 등)
+---
 
-.
+## Core Framework / 핵심 프레임워크
+
+> Framework source is located in `/src/core`  
+> 프레임워크 소스코드는 `/src/core` 경로에 있습니다
+
+The framework implements the following React internals from scratch:  
+다음 React 내부 동작을 직접 구현했습니다:
+
+- **Functional Components** — 함수형 컴포넌트 구조
+- **FiberNode** — React의 Fiber 아키텍처 구현
+- **Virtual DOM & Diff Algorithm** — 가상 DOM 및 diff 알고리즘
+- **useState** — 상태 관리 훅
+- **useEffect** — 사이드 이펙트 훅
+- **useRef** — DOM 참조 훅
+- **useGlobalState** — 전역 상태 관리
+- **Client-side Router** — 클라이언트 사이드 라우팅
+- **Event Bubbling** — 이벤트 버블링 처리
+
+> Why functional components?  
+> 클래스형 컴포넌트는 가독성이 떨어지고, `this`가 mutable하며 메모리를 더 소비한다는 점을 고려하여 함수형 컴포넌트 형태로 설계했습니다.
+
+---
+
+## Features / 주요 기능
+
+- Pong game (real-time multiplayer) / 핑퐁 게임 (실시간 멀티플레이)
+- User registration & login / 회원가입 및 로그인
+- Friend system / 친구 추가 기능
+- Game invitation / 게임 초대 기능
+
+---
+
+## Tech Stack / 기술 스택
+
+| Part | Stack |
+|------|-------|
+| Frontend | Vanilla JavaScript |
+| Backend | Django |
+| Infra | Nginx, Docker |
+| Auth | JWT Token |
+| Realtime | WebSocket |
+| UI | Bootstrap |
+
+---
+
+## Role / 담당 역할
+
+Frontend Lead / 프론트엔드 팀장
+
+- Designed and implemented the entire core framework / 프레임워크 전체 설계 및 구현
+- Page development / 페이지 기능 구현
+- UI design / UI 디자인
+
+---
+
+## Note / 참고
+
+Backend is in a separate repository. Local execution requires backend setup.  
+백엔드는 별도 레포에 있습니다. 로컬 실행 시 백엔드 설정이 필요합니다.
+
+For implementation details and problem-solving process, see HERE:  
+구현 과정 및 문제 해결 내용은 여기를 참고해주세요:  
+👉 [HERE](./CORE.md)
+
+---
+
+## Period / 진행 기간
+
+2024.02 — 2024.06
